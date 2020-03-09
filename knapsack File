@@ -1,3 +1,8 @@
+""" 
+ This is a version of the Knapsack problem, obtained from https://github.com/JuliaOpt/JuMP.jl/blob/master/examples/knapsack.jl, modified to receive
+ its input from a text file
+"""
+
 using JuMP, GLPK
 const MOI = JuMP.MathOptInterface
 
