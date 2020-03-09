@@ -1,0 +1,12 @@
+""" 
+ The text file must contain:
+ In the first line, the profit of each element 
+ In the second, the weight of each element
+ In the third, the capacity of the knapsack.
+ 
+ Exemple below.
+"""
+
+5 3 2 7 4
+2 8 4 2 5
+10
