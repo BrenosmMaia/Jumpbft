@@ -1,10 +1,10 @@
 using JuMP, GLPK
 
 
- function example_knapsack(nitens, profit, weight, capacity)
+ function example_knapsack(nitems, profit, weight, capacity)
 
     model = Model(GLPK.Optimizer)
-    @variable(model, x[1:nitens], Bin)
+    @variable(model, x[1:nitems], Bin)
     # Objective: maximize profit
     @objective(model, Max, profit' * x)
     # Constraint: can carry all
@@ -13,7 +13,7 @@ using JuMP, GLPK
     JuMP.optimize!(model)
         println("Objective is: ", JuMP.objective_value(model))
         println("Solution is:")
-        for i in 1:nitens
+        for i in 1:nitems
             print("x[$i] = ", JuMP.value(x[i]))
             println(", p[$i]/w[$i] = ", profit[i] / weight[i])
         end
@@ -52,5 +52,5 @@ function get_data(file)
     return nitens, profit, weight, capacity
 end
 
-nitens, profit, weight, capacity = get_data("path to input file here")
-example_knapsack(nitens, profit, weight, capacity)
+nitems, profit, weight, capacity = get_data("path to input file here")
+example_knapsack(nitems, profit, weight, capacity)
