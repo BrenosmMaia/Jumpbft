@@ -29,7 +29,7 @@ function get_data(file)
         exit(1)
     end
 
-    nitens  = parse(Int64, readline(file))
+    nitems  = parse(Int64, readline(file))
 
     profit = readline(file)
     profit = split(profit, " ")
