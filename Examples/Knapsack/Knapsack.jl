@@ -52,5 +52,5 @@ function get_data(file)
     return nitens, profit, weight, capacity
 end
 
-nitens, profit, weight, capacity = get_data("C:\\Users\\BrenoMaia\\Documents\\Julia\\input.txt")
+nitens, profit, weight, capacity = get_data("path to input file here")
 example_knapsack(nitens, profit, weight, capacity)
