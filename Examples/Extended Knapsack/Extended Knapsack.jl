@@ -82,5 +82,5 @@ function get_data(file)
 end
 
 
-m, c, n, a, b, Ni = get_data("C:\\Users\\BrenoMaia\\Documents\\Julia\\input2.txt")
+m, c, n, a, b, Ni = get_data("path to input file here")
 extended_kanpsack(m, c, n, a, b, Ni)
